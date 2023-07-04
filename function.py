@@ -19,7 +19,7 @@ def find_gene_family(targetspecies,pfam):
     pfam_list = pfam.split(",")
     if targetspecies in species:
         print("Reading json data ...")
-        species_dictionary = read_pfam_result("E:\work\plantFamily\database\json\pfamscan_result.json")
+        species_dictionary = read_pfam_result("./pfamscan_result.json")
         print("Finished reading! ")
         protein_info = species_dictionary[targetspecies]
         print("Now is searching %s" % targetspecies + "...")
@@ -38,7 +38,7 @@ def find_gene_family(targetspecies,pfam):
         return result_protein
     if targetspecies == "all":
         print("Reading json data ...")
-        species_dictionary = read_pfam_result("E:\work\plantFamily\database\json\pfamscan_result.json")
+        species_dictionary = read_pfam_result("./pfamscan_result.json")
         print("Finished reading! ")
         for key in species_dictionary.keys():
             print("Now is searching %s" % key + "...")
